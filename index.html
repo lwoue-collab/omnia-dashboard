@@ -828,11 +828,14 @@ function renderPriorities() {
       : `<td>—</td>`;
 
     const winTags = hasNewFormat
-      ? `<td><div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:9px;color:var(--light);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:2px;">LLMs currently cite:</span>${(p.what_wins||[]).map(w => {
+      ? `<td><div style="display:flex;flex-direction:column;gap:3px;"><span style="font-size:9px;color:var(--light);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:2px;">LLMs currently cite:</span>${(p.what_wins||[]).map(w => {
           const style = w.type==='warn' ? 'background:#FCEBEB;color:#791F1F;border-color:#E24B4A;'
             : w.type==='ok' ? 'background:#D5F5E3;color:#085041;border-color:#1D9E75;'
             : w.type==='amb' ? 'background:#FEF9E7;color:#7D6608;border-color:#EF9F27;'
             : 'background:var(--bg-secondary);color:var(--mid);border-color:var(--border);';
+          if (w.url) {
+            return `<a href="${w.url}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 6px;border-radius:4px;border:0.5px solid;margin:1px 0;text-decoration:none;${style}">${w.label} <span style="opacity:0.5;font-size:9px;">↗</span></a>`;
+          }
           return `<span style="display:inline-block;font-size:10px;padding:2px 6px;border-radius:4px;border:0.5px solid;margin:1px 0;${style}">${w.label}</span>`;
         }).join('<br>')}</div></td>`
       : `<td style="font-size:12px;color:var(--mid);">—</td>`;
