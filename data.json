@@ -355,9 +355,10 @@
       "gap": "-19pp",
       "status": "gap",
       "what_wins": [
-        {"label": "Brandjacking / impersonation guides", "type": "neutral"},
-        {"label": "Fake site and phishing takedown pages", "type": "neutral"},
-        {"label": "We have no dedicated impersonation page", "type": "warn"}
+        {"label": "The 8 Best Online Brand Protection Tools", "url": "https://www.brandshield.com/blog/best-online-brand-protection-tools", "type": "neutral"},
+        {"label": "Detect and Protect Against Brand Impersonation", "url": "https://corsearch.com/brand-protection-solutions/stop-impersonation", "type": "neutral"},
+        {"label": "Online Brand Protection — Stop Digital Impersonation", "url": "https://www.netcraft.com/solutions/use-cases/brand-protection-and-monitoring", "type": "neutral"},
+        {"label": "We have no dedicated impersonation page", "url": null, "type": "warn"}
       ]
     },
     {
@@ -370,9 +371,10 @@
       "gap": "-18pp",
       "status": "gap",
       "what_wins": [
-        {"label": "Amazon Seller Central help docs", "type": "neutral"},
-        {"label": "MAP policy and pricing control guides", "type": "neutral"},
-        {"label": "No brand protection vendor dominates — opportunity", "type": "ok"}
+        {"label": "How to Stop Unauthorized Sellers — Wiser", "url": "https://www.wiser.com/blog/unauthorized-sellers-protect-your-brand", "type": "neutral"},
+        {"label": "Removing Unauthorized Sellers from Marketplaces", "url": "https://grayfalkon.com/effective-strategies-for-removing-unauthorized-sellers-from-online-marketplaces", "type": "neutral"},
+        {"label": "Marketplace Brand Protection — BrandShield", "url": "https://www.brandshield.com/marketplace-brand-protection", "type": "neutral"},
+        {"label": "No brand protection vendor dominates — opportunity", "url": null, "type": "ok"}
       ]
     },
     {
@@ -385,9 +387,10 @@
       "gap": "-2pp",
       "status": "close",
       "what_wins": [
-        {"label": "Anti-counterfeit solution landing pages", "type": "neutral"},
-        {"label": "Marketplace brand protection guides", "type": "neutral"},
-        {"label": "Physical auth tools also appear — wrong category risk", "type": "amb"}
+        {"label": "10 Best Brand Protection Tools — MarqVision", "url": "https://www.marqvision.com/blog/brand-protection-tools", "type": "neutral"},
+        {"label": "Top 10 Brand Protection Companies — Podqi", "url": "https://podqi.com/blog/top-10-brand-protection-companies-in-2025", "type": "neutral"},
+        {"label": "Anti-counterfeiting technology companies — ScanTrust", "url": "https://www.scantrust.com/anti-counterfeiting-technology-companies-a-comprehensive-guide", "type": "neutral"},
+        {"label": "Physical auth tools also appear — wrong category risk", "url": null, "type": "amb"}
       ]
     },
     {
@@ -400,8 +403,9 @@
       "gap": "-10pp",
       "status": "close",
       "what_wins": [
-        {"label": "Dedicated Revenue Recovery landing pages", "type": "neutral"},
-        {"label": "Our page exists but Corsearch is cited more often", "type": "warn"}
+        {"label": "BrandShield vs Red Points comparison", "url": "https://www.brandshield.com/blog/brandshield-vs-red-points", "type": "neutral"},
+        {"label": "Red Points on Gartner", "url": "https://www.gartner.com/reviews/market/brand-protection-software/vendor/red-points/product/red-points", "type": "neutral"},
+        {"label": "Our page exists but Corsearch is cited more often", "url": null, "type": "warn"}
       ]
     },
     {
@@ -414,8 +418,9 @@
       "gap": "-2pp",
       "status": "close",
       "what_wins": [
-        {"label": "Platform comparison pages", "type": "neutral"},
-        {"label": "Gap is only 2pp — more prompts will close this", "type": "ok"}
+        {"label": "18 Best DMCA Takedown Services — Bustem", "url": "https://bustem.com/blog/best-dmca-takedown-service", "type": "neutral"},
+        {"label": "Top 20 DMCA Takedown Services — DMCAForce", "url": "https://dmcaforce.com/top-20-dmca-takedown-services-in-2025", "type": "neutral"},
+        {"label": "Gap is only 2pp — more prompts will close this", "url": null, "type": "ok"}
       ]
     }
   ],
