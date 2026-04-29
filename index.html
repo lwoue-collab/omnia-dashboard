@@ -703,17 +703,64 @@ function renderTrend() {
 
 function renderThemes() {
   const themes = DATA.themes;
+  const themePrompts = DATA.theme_prompts || {};
+  const stageColors = {'TOFU':'pill-tofu','MOFU':'pill-mofu','BOFU':'pill-bofu'};
+
   document.getElementById('theme-bars').innerHTML = themes.map(t => {
     const cls = t.status === 'gap' ? 'gap' : t.status === 'leading' ? 'leading' : '';
     const pctLabel = t.status === 'gap'
       ? `<span style="color:var(--red);font-family:'DM Mono',monospace;font-size:12px;">${t.visibility}% ↓</span>`
       : `<span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--mid);">${t.visibility}%</span>`;
-    return `<div class="theme-bar-row">
-      <div class="theme-name ${cls}">${t.name}</div>
-      <div class="theme-bar-track"><div class="theme-bar-fill" style="width:${t.visibility}%;"></div></div>
-      ${pctLabel}
+
+    const prompts = themePrompts[t.name] || [];
+    const hasData = prompts.length > 0;
+
+    const promptRows = prompts.map(p => {
+      const stagePill = `<span class="pill ${stageColors[p.stage]||'pill-pending'}" style="font-size:9px;">${p.stage}</span>`;
+      const rankBadge = p.rp_rank
+        ? `<span class="rank-circle ${p.rp_rank===1?'rank-1':p.rp_rank<=3?'rank-2':'rank-4'}" style="width:18px;height:18px;font-size:9px;">#${p.rp_rank}</span>`
+        : `<span style="font-size:10px;color:var(--light);">—</span>`;
+      const mentions = (p.top_mentions||[]).length > 0
+        ? p.top_mentions.slice(0,3).map(m => `<div class="mini-row"><span class="mini-name ${m.owned?'owned':''}" style="min-width:70px;">${m.name}</span><div class="mini-track"><div class="mini-fill ${m.owned?'mini-fill-owned':'mini-fill-comp'}" style="width:${m.visibility}%;"></div></div><span class="mini-pct ${m.owned?'owned':''}">${m.visibility}%</span></div>`).join('')
+        : `<span style="font-size:10px;color:var(--light);font-style:italic;">Data building — added 28 Apr</span>`;
+
+      return `<div style="display:grid;grid-template-columns:1fr 50px 50px 180px;gap:8px;align-items:center;padding:6px 14px;border-bottom:0.5px solid var(--border);">
+        <div style="font-size:11px;color:var(--mid);font-style:italic;line-height:1.3;">"${p.text}"</div>
+        <div>${stagePill}</div>
+        <div style="text-align:center;">${rankBadge}</div>
+        <div class="mini-mentions">${mentions}</div>
+      </div>`;
+    }).join('');
+
+    const toggleId = `theme-prompts-${t.name.replace('-','_')}`;
+
+    return `<div style="border-bottom:0.5px solid var(--border);">
+      <div class="theme-bar-row" style="cursor:${hasData?'pointer':'default'};" onclick="${hasData?`toggleThemePrompts('${toggleId}')`:''}" >
+        <div class="theme-name ${cls}">${t.name}</div>
+        <div class="theme-bar-track"><div class="theme-bar-fill" style="width:${t.visibility}%;"></div></div>
+        ${pctLabel}
+        ${hasData?`<span id="arr-${toggleId}" style="font-size:11px;color:var(--light);margin-left:8px;transition:transform 0.2s;display:inline-block;">›</span>`:''}
+      </div>
+      ${hasData?`<div id="${toggleId}" style="display:none;">
+        <div style="display:grid;grid-template-columns:1fr 50px 50px 180px;gap:8px;padding:5px 14px;background:var(--bg-secondary);">
+          <span style="font-size:9px;font-weight:500;color:var(--light);text-transform:uppercase;letter-spacing:0.04em;">Prompt</span>
+          <span style="font-size:9px;font-weight:500;color:var(--light);text-transform:uppercase;letter-spacing:0.04em;">Stage</span>
+          <span style="font-size:9px;font-weight:500;color:var(--light);text-transform:uppercase;letter-spacing:0.04em;">RP rank</span>
+          <span style="font-size:9px;font-weight:500;color:var(--light);text-transform:uppercase;letter-spacing:0.04em;">Who LLMs mention</span>
+        </div>
+        ${promptRows}
+      </div>`:''}
     </div>`;
   }).join('');
+}
+
+function toggleThemePrompts(id) {
+  const el = document.getElementById(id);
+  const arr = document.getElementById('arr-' + id);
+  if (!el) return;
+  const open = el.style.display === 'none';
+  el.style.display = open ? 'block' : 'none';
+  if (arr) arr.style.transform = open ? 'rotate(90deg)' : 'rotate(0deg)';
 }
 
 function renderPromptRows() {
