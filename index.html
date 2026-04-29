@@ -459,6 +459,34 @@ tbody tr:hover td { background: var(--bg-secondary); }
       <b>How BOFU is measured:</b> only on category-aware prompts — neutral queries that name no vendor. Competitive and branded-direct prompts are excluded as they always bias toward the named entity.
     </div>
 
+    <button class="prompt-toggle-btn" onclick="toggleFunnelLegend()" style="margin-bottom:14px;">
+      <span class="toggle-label">What do TOFU, MOFU and BOFU mean? <span style="color:var(--light);margin-left:4px;">— click to expand</span></span>
+      <span class="toggle-arrow" id="funnel-legend-arrow">›</span>
+    </button>
+    <div class="prompt-list-wrap" id="funnel-legend-wrap" style="margin-bottom:16px;margin-top:-14px;">
+      <div style="display:flex;align-items:baseline;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);">
+        <span class="pill pill-tofu" style="flex-shrink:0;min-width:46px;text-align:center;">TOFU</span>
+        <div>
+          <div style="font-size:12px;font-weight:500;color:var(--dark);margin-bottom:2px;">Top of funnel — incident discovery</div>
+          <div style="font-size:12px;color:var(--mid);line-height:1.5;">The buyer just discovered a problem. No software intent yet. They're describing an incident — "someone is selling copies of my product", "a fake page is using our brand". They don't know solutions exist yet.</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);">
+        <span class="pill pill-mofu" style="flex-shrink:0;min-width:46px;text-align:center;">MOFU</span>
+        <div>
+          <div style="font-size:12px;font-weight:500;color:var(--dark);margin-bottom:2px;">Middle of funnel — evaluating solutions</div>
+          <div style="font-size:12px;color:var(--mid);line-height:1.5;">The buyer knows the problem is recurring and is looking for a solution. They've tried something (manual checks, spreadsheets, an attorney) and it isn't working. They're asking "how do I fix this at scale?"</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:10px;padding:10px 14px;">
+        <span class="pill pill-bofu" style="flex-shrink:0;min-width:46px;text-align:center;">BOFU</span>
+        <div>
+          <div style="font-size:12px;font-weight:500;color:var(--dark);margin-bottom:2px;">Bottom of funnel — vendor selection</div>
+          <div style="font-size:12px;color:var(--mid);line-height:1.5;">The buyer is shortlisting vendors. They know software exists and are comparing options — "Red Points vs Corsearch", "which platform offers unlimited takedowns?" They're close to a buying decision.</div>
+        </div>
+      </div>
+    </div>
+
     <div class="kpi-grid">
       <div class="kpi-card">
         <div class="kpi-label">BOFU — category-aware</div>
@@ -853,6 +881,12 @@ function renderPriorities() {
   }).join('');
 }
 
+function toggleFunnelLegend() {
+  const wrap = document.getElementById('funnel-legend-wrap');
+  const arrow = document.getElementById('funnel-legend-arrow');
+  const open = wrap.classList.toggle('open');
+  arrow.classList.toggle('open', open);
+}
 function toggleGlossary() {
   const wrap = document.getElementById('glossary-wrap');
   const arrow = document.getElementById('glossary-arrow');
