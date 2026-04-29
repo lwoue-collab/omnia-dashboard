@@ -199,7 +199,7 @@
         },
         {
           "name": "MarqVision",
-          "visibility": 41,
+          "visibility": 42,
           "owned": false
         }
       ]
@@ -341,12 +341,12 @@
     },
     {
       "name": "unauthorized-sellers",
-      "visibility": 43,
+      "visibility": 47,
       "status": "close"
     },
     {
       "name": "fake-products",
-      "visibility": 36,
+      "visibility": 35,
       "status": "close"
     },
     {
