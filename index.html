@@ -415,13 +415,13 @@ tbody tr:hover td { background: var(--bg-secondary); }
   </div>
   <div class="nav-section" style="margin-bottom:8px;">Views</div>
   <a class="nav-link active" onclick="switchTab('sergi',this)">
-    <span class="nav-dot"></span>Sergi's view
+    <span class="nav-dot"></span>Performance
   </a>
   <a class="nav-link" onclick="switchTab('laetitia',this)">
-    <span class="nav-dot"></span>Laetitia's view
+    <span class="nav-dot"></span>Visibility by theme
   </a>
   <a class="nav-link" onclick="switchTab('content',this)">
-    <span class="nav-dot"></span>Content team
+    <span class="nav-dot"></span>Content priorities
   </a>
   <div class="sidebar-footer">
     <div id="last-updated">Loading…</div>
@@ -509,26 +509,29 @@ tbody tr:hover td { background: var(--bg-secondary); }
   <!-- LAETITIA -->
   <div class="tab-pane" id="tab-laetitia">
 
+    <button class="prompt-toggle-btn" onclick="toggleGlossary()" style="margin-bottom:14px;">
+      <span class="toggle-label">What do these themes mean? <span style="color:var(--light);margin-left:4px;">— click to expand</span></span>
+      <span class="toggle-arrow" id="glossary-arrow">›</span>
+    </button>
+    <div class="prompt-list-wrap" id="glossary-wrap" style="margin-bottom:16px;margin-top:-14px;">
+      <div style="display:flex;align-items:baseline;gap:10px;padding:8px 14px;border-bottom:1px solid var(--border);"><span class="pill pill-tofu" style="flex-shrink:0;">fake-products</span><span style="font-size:12px;color:var(--mid);line-height:1.5;">Counterfeit physical product manufactured and sold on marketplaces or social commerce.</span></div>
+      <div style="display:flex;align-items:baseline;gap:10px;padding:8px 14px;border-bottom:1px solid var(--border);"><span class="pill" style="flex-shrink:0;background:#FBEAF0;color:#72243E;">brand-impersonation</span><span style="font-size:12px;color:var(--mid);line-height:1.5;">Fraudster pretending to BE the brand — fake websites, social pages, ads, or domain spoofing.</span></div>
+      <div style="display:flex;align-items:baseline;gap:10px;padding:8px 14px;border-bottom:1px solid var(--border);"><span class="pill" style="flex-shrink:0;background:#F1EFE8;color:#5F5E5A;">unauthorized-sellers</span><span style="font-size:12px;color:var(--mid);line-height:1.5;">Real products sold without authorization — gray market, MAP violations, reseller control.</span></div>
+      <div style="display:flex;align-items:baseline;gap:10px;padding:8px 14px;border-bottom:1px solid var(--border);"><span class="pill pill-grn" style="flex-shrink:0;">manual-enforcement</span><span style="font-size:12px;color:var(--mid);line-height:1.5;">Doing this manually and it isn't scaling — spreadsheets, attorney bottlenecks, whack-a-mole.</span></div>
+      <div style="display:flex;align-items:baseline;gap:10px;padding:8px 14px;border-bottom:1px solid var(--border);"><span class="pill" style="flex-shrink:0;background:#EAF3DE;color:#3B6D11;">global-enforcement</span><span style="font-size:12px;color:var(--mid);line-height:1.5;">Brand copying in harder-to-enforce markets — China, Alibaba, Pinduoduo, APAC cross-border.</span></div>
+      <div style="display:flex;align-items:baseline;gap:10px;padding:8px 14px;"><span class="pill pill-ca" style="flex-shrink:0;">category-aware</span><span style="font-size:12px;color:var(--mid);line-height:1.5;">Buyer already knows software exists and is evaluating — neutral BOFU queries naming no vendor.</span></div>
+    </div>
+
     <div class="section">
-      <div class="section-title">Visibility by content theme</div>
-      <div class="theme-card" id="theme-bars"></div>
+      <div class="section-title">Visibility by theme — click any row to see prompt detail</div>
+      <div class="trend-card" id="theme-bars"></div>
     </div>
 
     <div class="section">
       <div class="section-title">Category-aware prompt detail</div>
-      <div class="comp-card">
-        <p style="font-size:12px;color:var(--mid);margin-bottom:4px;">Top competitors on neutral BOFU queries — real Omnia data, Apr 2026.</p>
-        <div class="legend">
-          <div class="leg-item"><div class="leg-dot" style="background:var(--red);"></div>Red Points</div>
-          <div class="leg-item"><div class="leg-dot" style="background:#B4B2A9;"></div>Competitors</div>
-        </div>
-        <div id="comp-bars-2"></div>
-      </div>
-
-      <!-- EXPANDABLE PROMPT LIST -->
       <button class="prompt-toggle-btn" onclick="togglePrompts()">
         <span class="toggle-label">
-          <span class="pill pill-bofu">18 prompts</span>
+          <span class="pill pill-ca">18 prompts</span>
           <span><b>category-aware</b> — see exact queries and who LLMs mention</span>
         </span>
         <span class="toggle-arrow" id="toggle-arrow">›</span>
@@ -546,45 +549,29 @@ tbody tr:hover td { background: var(--bg-secondary); }
 
   </div>
 
-  <!-- CONTENT TEAM -->
+  <!-- CONTENT PRIORITIES -->
   <div class="tab-pane" id="tab-content">
-
     <div class="section">
       <div class="section-title">Content priorities — from visibility gaps</div>
       <div class="priority-card">
         <table>
           <thead>
             <tr>
-              <th>Priority</th>
-              <th>Content to create</th>
-              <th>Stage</th>
-              <th>Our visibility</th>
-              <th>Who owns it now</th>
+              <th style="width:4%">#</th>
+              <th style="width:17%">Content to create</th>
+              <th style="width:10%">Stage</th>
+              <th style="width:11%">Who leads</th>
+              <th style="width:9%">Their score</th>
+              <th style="width:8%">We rank</th>
+              <th style="width:8%">Gap</th>
+              <th style="width:33%">What content wins visibility</th>
             </tr>
           </thead>
           <tbody id="priorities-body"></tbody>
         </table>
+        <div style="font-size:11px;color:var(--light);padding:10px 14px;border-top:1px solid var(--border);">Gap = leader's score minus Red Points. "What content wins" = page types LLMs currently cite when answering prompts in that theme.</div>
       </div>
     </div>
-
-    <div class="section">
-      <div class="section-title">New prompts from typeform — pending review</div>
-      <div class="tf-card">
-        <table>
-          <thead>
-            <tr>
-              <th>Prompt</th>
-              <th>Stage</th>
-              <th>Theme</th>
-              <th>Count</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody id="typeform-body"></tbody>
-        </table>
-      </div>
-    </div>
-
   </div>
 
 </main>
@@ -630,7 +617,6 @@ function renderAll() {
 
   // Competitor bars
   renderCompBars('comp-bars', d.competitors_bofu, d.bofu_ca_avg4, mode === 'weekly');
-  renderCompBars('comp-bars-2', d.competitors_bofu, d.bofu_ca_avg4, false);
 
   // Trend
   renderTrend();
@@ -643,9 +629,6 @@ function renderAll() {
 
   // Priorities
   renderPriorities();
-
-  // Typeform
-  renderTypeform();
 }
 
 function renderKPI(id, val, prev, avg, showAvg) {
@@ -772,41 +755,60 @@ function renderPromptRows() {
 
 function renderPriorities() {
   const stageMap = { 'TOFU': 'pill-tofu', 'MOFU': 'pill-mofu', 'BOFU': 'pill-bofu', 'BOFU competitive': 'pill-comp' };
-  document.getElementById('priorities-body').innerHTML = DATA.content_priorities.map(p => {
+  const el = document.getElementById('priorities-body');
+  if (!el) return;
+  el.innerHTML = DATA.content_priorities.map(p => {
     const numCls = p.priority <= 3 ? 'high' : 'mid';
-    const stages = p.stages.map(s => `<span class="pill ${stageMap[s] || 'pill-pending'}">${s}</span>`).join(' ');
-    const visPill = p.status === 'gap'
-      ? `<span class="pill pill-err">${p.our_visibility}% — gap</span>`
-      : `<span class="pill pill-amb">${p.our_visibility}% — close</span>`;
+    const stages = (p.stages || []).map(s => `<span class="pill ${stageMap[s] || 'pill-pending'}">${s}</span>`).join('<br style="margin:2px 0;display:block;">');
+
+    // Support both old format (our_visibility/owner) and new format (leader/leader_score/our_rank/gap/what_wins)
+    const hasNewFormat = p.leader !== undefined;
+
+    const leaderCol = hasNewFormat
+      ? `<td style="font-size:12px;font-weight:500;">${p.leader || '—'}</td>`
+      : `<td style="font-size:12px;color:var(--mid);">${p.owner || '—'}</td>`;
+
+    const leaderScore = hasNewFormat
+      ? `<td><span class="pill pill-err" style="font-family:'DM Mono',monospace;">${p.leader_score}%</span></td>`
+      : `<td><span class="pill ${p.status==='gap'?'pill-err':'pill-amb'}">${p.our_visibility}%</span></td>`;
+
+    const rankTxt = hasNewFormat
+      ? `<td style="font-weight:500;color:${p.status==='gap'?'var(--red)':'#7D6608'};">${p.our_rank || '—'}</td>`
+      : `<td>—</td>`;
+
+    const gapTxt = hasNewFormat
+      ? `<td><span class="pill ${p.status==='gap'?'pill-err':'pill-amb'}" style="font-family:'DM Mono',monospace;">${p.gap || '—'}</span></td>`
+      : `<td>—</td>`;
+
+    const winTags = hasNewFormat
+      ? `<td><div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:9px;color:var(--light);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:2px;">LLMs currently cite:</span>${(p.what_wins||[]).map(w => {
+          const style = w.type==='warn' ? 'background:#FCEBEB;color:#791F1F;border-color:#E24B4A;'
+            : w.type==='ok' ? 'background:#D5F5E3;color:#085041;border-color:#1D9E75;'
+            : w.type==='amb' ? 'background:#FEF9E7;color:#7D6608;border-color:#EF9F27;'
+            : 'background:var(--bg-secondary);color:var(--mid);border-color:var(--border);';
+          return `<span style="display:inline-block;font-size:10px;padding:2px 6px;border-radius:4px;border:0.5px solid;margin:1px 0;${style}">${w.label}</span>`;
+        }).join('<br>')}</div></td>`
+      : `<td style="font-size:12px;color:var(--mid);">—</td>`;
+
     return `<tr>
       <td><span class="p-num ${numCls}">${p.priority}</span></td>
-      <td style="font-size:13px;">${p.content}</td>
+      <td style="font-size:12px;font-weight:500;">${p.content}</td>
       <td>${stages}</td>
-      <td>${visPill}</td>
-      <td style="font-size:12px;color:var(--mid);">${p.owner}</td>
+      ${leaderCol}
+      ${leaderScore}
+      ${rankTxt}
+      ${gapTxt}
+      ${winTags}
     </tr>`;
   }).join('');
 }
 
-function renderTypeform() {
-  const stageMap = { 'TOFU': 'pill-tofu', 'MOFU': 'pill-mofu', 'BOFU competitive': 'pill-comp' };
-  document.getElementById('typeform-body').innerHTML = DATA.typeform_pending.map(t => {
-    const statusPill = t.status === 'ready'
-      ? '<span class="pill pill-grn">Ready</span>'
-      : '<span class="pill pill-amb">Wait</span>';
-    const countPill = t.count
-      ? (t.status === 'hold' ? `<span class="pill pill-amb">${t.count} — hold</span>` : `<span class="pill pill-grn">${t.count} ✓</span>`)
-      : '—';
-    return `<tr>
-      <td style="font-size:12px;font-style:italic;color:var(--mid);">"${t.text}"</td>
-      <td><span class="pill ${stageMap[t.stage] || 'pill-pending'}">${t.stage}</span></td>
-      <td style="font-size:11px;color:var(--light);">${t.theme || '—'}</td>
-      <td>${countPill}</td>
-      <td>${statusPill}</td>
-    </tr>`;
-  }).join('');
+function toggleGlossary() {
+  const wrap = document.getElementById('glossary-wrap');
+  const arrow = document.getElementById('glossary-arrow');
+  const open = wrap.classList.toggle('open');
+  arrow.classList.toggle('open', open);
 }
-
 function navigate(dir) {
   idx = Math.max(0, Math.min(getData().length - 1, idx + dir));
   renderAll();
