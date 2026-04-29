@@ -620,7 +620,6 @@ function renderAll() {
 
   // Competitor bars
   renderCompBars('comp-bars', d.competitors_bofu, d.bofu_ca_avg4, mode === 'weekly');
-  renderCompBars('comp-bars-2', d.competitors_bofu, d.bofu_ca_avg4, false);
 
   // Trend
   renderTrend();
@@ -632,9 +631,6 @@ function renderAll() {
   renderPromptRows();
 
   // Priorities
-  renderPriorities();
-
-  // Typeform
   renderPriorities();
 }
 
