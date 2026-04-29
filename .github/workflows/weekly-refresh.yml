@@ -1,0 +1,38 @@
+name: Weekly Omnia data refresh
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'   # Every Monday at 08:00 UTC
+  workflow_dispatch:        # Allow manual trigger from GitHub UI
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch Omnia data
+        env:
+          OMNIA_API_KEY: ${{ secrets.OMNIA_API_KEY }}
+          OMNIA_BASE_URL: https://app.useomnia.com
+        run: python fetch_data.py
+
+      - name: Commit updated data.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git diff --staged --quiet || git commit -m "chore: weekly Omnia data refresh $(date +%Y-%m-%d)"
+          git push

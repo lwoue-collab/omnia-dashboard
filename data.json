@@ -1,0 +1,359 @@
+{
+  "lastUpdated": "2026-04-28",
+  "weekly": [
+    {
+      "period": "17 Mar 2026",
+      "bofu_ca": 68,
+      "bofu_ca_avg4": 67,
+      "mofu": null,
+      "tofu": null,
+      "competitors_bofu": [
+        {"name": "Red Points", "visibility": 68, "owned": true},
+        {"name": "BrandShield", "visibility": 75, "owned": false},
+        {"name": "Corsearch", "visibility": 49, "owned": false},
+        {"name": "MarqVision", "visibility": 45, "owned": false}
+      ]
+    },
+    {
+      "period": "24 Mar 2026",
+      "bofu_ca": 69,
+      "bofu_ca_avg4": 68,
+      "mofu": null,
+      "tofu": null,
+      "competitors_bofu": [
+        {"name": "Red Points", "visibility": 69, "owned": true},
+        {"name": "BrandShield", "visibility": 75, "owned": false},
+        {"name": "Corsearch", "visibility": 49, "owned": false},
+        {"name": "MarqVision", "visibility": 45, "owned": false}
+      ]
+    },
+    {
+      "period": "31 Mar 2026",
+      "bofu_ca": 70,
+      "bofu_ca_avg4": 69,
+      "mofu": null,
+      "tofu": null,
+      "competitors_bofu": [
+        {"name": "Red Points", "visibility": 70, "owned": true},
+        {"name": "BrandShield", "visibility": 75, "owned": false},
+        {"name": "Corsearch", "visibility": 49, "owned": false},
+        {"name": "MarqVision", "visibility": 45, "owned": false}
+      ]
+    },
+    {
+      "period": "7 Apr 2026",
+      "bofu_ca": 71,
+      "bofu_ca_avg4": 69,
+      "mofu": null,
+      "tofu": null,
+      "competitors_bofu": [
+        {"name": "Red Points", "visibility": 71, "owned": true},
+        {"name": "BrandShield", "visibility": 75, "owned": false},
+        {"name": "Corsearch", "visibility": 49, "owned": false},
+        {"name": "MarqVision", "visibility": 45, "owned": false}
+      ]
+    },
+    {
+      "period": "14 Apr 2026",
+      "bofu_ca": 70,
+      "bofu_ca_avg4": 70,
+      "mofu": null,
+      "tofu": null,
+      "competitors_bofu": [
+        {"name": "Red Points", "visibility": 70, "owned": true},
+        {"name": "BrandShield", "visibility": 75, "owned": false},
+        {"name": "Corsearch", "visibility": 49, "owned": false},
+        {"name": "MarqVision", "visibility": 45, "owned": false}
+      ]
+    },
+    {
+      "period": "28 Apr 2026",
+      "bofu_ca": 73,
+      "bofu_ca_avg4": 71,
+      "mofu": null,
+      "tofu": null,
+      "competitors_bofu": [
+        {"name": "Red Points", "visibility": 73, "owned": true},
+        {"name": "BrandShield", "visibility": 75, "owned": false},
+        {"name": "Corsearch", "visibility": 49, "owned": false},
+        {"name": "MarqVision", "visibility": 45, "owned": false}
+      ]
+    }
+  ],
+  "monthly": [
+    {
+      "period": "Jan 2026",
+      "bofu_ca": 65,
+      "bofu_ca_avg4": 64,
+      "mofu": null,
+      "tofu": null,
+      "competitors_bofu": [
+        {"name": "Red Points", "visibility": 65, "owned": true},
+        {"name": "BrandShield", "visibility": 73, "owned": false},
+        {"name": "Corsearch", "visibility": 47, "owned": false},
+        {"name": "MarqVision", "visibility": 43, "owned": false}
+      ]
+    },
+    {
+      "period": "Feb 2026",
+      "bofu_ca": 68,
+      "bofu_ca_avg4": 65,
+      "mofu": null,
+      "tofu": null,
+      "competitors_bofu": [
+        {"name": "Red Points", "visibility": 68, "owned": true},
+        {"name": "BrandShield", "visibility": 74, "owned": false},
+        {"name": "Corsearch", "visibility": 48, "owned": false},
+        {"name": "MarqVision", "visibility": 44, "owned": false}
+      ]
+    },
+    {
+      "period": "Mar 2026",
+      "bofu_ca": 70,
+      "bofu_ca_avg4": 67,
+      "mofu": null,
+      "tofu": null,
+      "competitors_bofu": [
+        {"name": "Red Points", "visibility": 70, "owned": true},
+        {"name": "BrandShield", "visibility": 75, "owned": false},
+        {"name": "Corsearch", "visibility": 49, "owned": false},
+        {"name": "MarqVision", "visibility": 45, "owned": false}
+      ]
+    },
+    {
+      "period": "Apr 2026",
+      "bofu_ca": 73,
+      "bofu_ca_avg4": 69,
+      "mofu": null,
+      "tofu": null,
+      "competitors_bofu": [
+        {"name": "Red Points", "visibility": 73, "owned": true},
+        {"name": "BrandShield", "visibility": 75, "owned": false},
+        {"name": "Corsearch", "visibility": 49, "owned": false},
+        {"name": "MarqVision", "visibility": 45, "owned": false}
+      ]
+    }
+  ],
+  "themes": [
+    {"name": "category-aware", "visibility": 73, "status": "leading"},
+    {"name": "global-enforcement", "visibility": 68, "status": "leading"},
+    {"name": "manual-enforcement", "visibility": 66, "status": "leading"},
+    {"name": "unauthorized-sellers", "visibility": 46, "status": "close"},
+    {"name": "fake-products", "visibility": 31, "status": "close"},
+    {"name": "brand-impersonation", "visibility": 23, "status": "gap"}
+  ],
+  "category_aware_prompts": [
+    {
+      "text": "Which brand protection platforms offer flat-fee pricing with unlimited takedowns?",
+      "modifier": "narrative-grounding",
+      "rp_rank": 1,
+      "rp_visibility": 93,
+      "top_mentions": [
+        {"name": "Red Points", "visibility": 93, "owned": true},
+        {"name": "BrandShield", "visibility": 80, "owned": false},
+        {"name": "BrandProtection.ai", "visibility": 53, "owned": false}
+      ]
+    },
+    {
+      "text": "Which brand protection software offers unlimited takedowns at a flat fee?",
+      "modifier": "narrative-grounding",
+      "rp_rank": 1,
+      "rp_visibility": 97,
+      "top_mentions": [
+        {"name": "Red Points", "visibility": 97, "owned": true},
+        {"name": "BrandShield", "visibility": 65, "owned": false},
+        {"name": "ZeroFox", "visibility": 34, "owned": false}
+      ]
+    },
+    {
+      "text": "Which brand protection platforms offer unlimited enforcement?",
+      "modifier": "narrative-grounding",
+      "rp_rank": 1,
+      "rp_visibility": 88,
+      "top_mentions": [
+        {"name": "Red Points", "visibility": 88, "owned": true},
+        {"name": "BrandShield", "visibility": 87, "owned": false},
+        {"name": "MarqVision", "visibility": 42, "owned": false}
+      ]
+    },
+    {
+      "text": "Which brand protection platforms use smart rules to automate detection and enforcement?",
+      "modifier": null,
+      "rp_rank": 1,
+      "rp_visibility": 82,
+      "top_mentions": [
+        {"name": "Red Points", "visibility": 82, "owned": true},
+        {"name": "MarqVision", "visibility": 81, "owned": false},
+        {"name": "BrandShield", "visibility": 74, "owned": false}
+      ]
+    },
+    {
+      "text": "Which brand protection platforms use predictive analytics for enforcement and risk prioritization?",
+      "modifier": null,
+      "rp_rank": 1,
+      "rp_visibility": 75,
+      "top_mentions": [
+        {"name": "Red Points", "visibility": 75, "owned": true},
+        {"name": "MarqVision", "visibility": 74, "owned": false},
+        {"name": "BrandShield", "visibility": 64, "owned": false}
+      ]
+    },
+    {
+      "text": "Which brand protection platforms offer a fully managed service model rather than self-serve?",
+      "modifier": null,
+      "rp_rank": 1,
+      "rp_visibility": 66,
+      "top_mentions": [
+        {"name": "Red Points", "visibility": 66, "owned": true},
+        {"name": "BrandShield", "visibility": 66, "owned": false},
+        {"name": "Corsearch", "visibility": 59, "owned": false}
+      ]
+    },
+    {
+      "text": "Which brand protection platforms offer zero-cost litigation and revenue recovery programs?",
+      "modifier": "narrative-grounding",
+      "rp_rank": 2,
+      "rp_visibility": 73,
+      "top_mentions": [
+        {"name": "Corsearch", "visibility": 83, "owned": false},
+        {"name": "Red Points", "visibility": 73, "owned": true},
+        {"name": "MarqVision", "visibility": 46, "owned": false}
+      ]
+    },
+    {
+      "text": "What is the best brand protection software for enterprise-level companies?",
+      "modifier": "icp-specific",
+      "rp_rank": 2,
+      "rp_visibility": 91,
+      "top_mentions": [
+        {"name": "BrandShield", "visibility": 96, "owned": false},
+        {"name": "Red Points", "visibility": 91, "owned": true},
+        {"name": "Corsearch", "visibility": 90, "owned": false}
+      ]
+    },
+    {
+      "text": "What brand protection platforms provide coverage across marketplaces, social media, websites, and ads?",
+      "modifier": null,
+      "rp_rank": 2,
+      "rp_visibility": 71,
+      "top_mentions": [
+        {"name": "BrandShield", "visibility": 96, "owned": false},
+        {"name": "Red Points", "visibility": 71, "owned": true},
+        {"name": "ZeroFox", "visibility": 66, "owned": false}
+      ]
+    },
+    {
+      "text": "Which brand protection software is best for stopping gray market and parallel imports?",
+      "modifier": null,
+      "rp_rank": 2,
+      "rp_visibility": 81,
+      "top_mentions": [
+        {"name": "Corsearch", "visibility": 88, "owned": false},
+        {"name": "Red Points", "visibility": 81, "owned": true},
+        {"name": "BrandShield", "visibility": 68, "owned": false}
+      ]
+    },
+    {
+      "text": "Which brand protection platforms offer API integrations with marketplaces and ecommerce systems?",
+      "modifier": null,
+      "rp_rank": 2,
+      "rp_visibility": 85,
+      "top_mentions": [
+        {"name": "BrandShield", "visibility": 95, "owned": false},
+        {"name": "Red Points", "visibility": 85, "owned": true},
+        {"name": "Amazon", "visibility": 76, "owned": false}
+      ]
+    },
+    {
+      "text": "Which brand protection solution covers the most channels?",
+      "modifier": null,
+      "rp_rank": 3,
+      "rp_visibility": 63,
+      "top_mentions": [
+        {"name": "BrandShield", "visibility": 96, "owned": false},
+        {"name": "ZeroFox", "visibility": 81, "owned": false},
+        {"name": "Red Points", "visibility": 63, "owned": true}
+      ]
+    },
+    {
+      "text": "Which brand protection platforms train their AI models on large proprietary datasets?",
+      "modifier": "narrative-grounding",
+      "rp_rank": 4,
+      "rp_visibility": 50,
+      "top_mentions": [
+        {"name": "ZeroFox", "visibility": 75, "owned": false},
+        {"name": "BrandShield", "visibility": 67, "owned": false},
+        {"name": "Red Points", "visibility": 50, "owned": true}
+      ]
+    },
+    {
+      "text": "What are the benefits of using AI-driven solutions for online brand protection?",
+      "modifier": null,
+      "rp_rank": 5,
+      "rp_visibility": 17,
+      "top_mentions": [
+        {"name": "BrandShield", "visibility": 44, "owned": false},
+        {"name": "ZeroFox", "visibility": 32, "owned": false},
+        {"name": "Red Points", "visibility": 17, "owned": true}
+      ]
+    },
+    {
+      "text": "Which AI-powered platforms help verify product authenticity and detect counterfeits online?",
+      "modifier": null,
+      "rp_rank": null,
+      "rp_visibility": null,
+      "top_mentions": [
+        {"name": "VISUA", "visibility": 67, "owned": false},
+        {"name": "Entrupy", "visibility": 62, "owned": false},
+        {"name": "TrueMed", "visibility": 61, "owned": false}
+      ]
+    },
+    {
+      "text": "Which brand protection platforms have the fastest takedown times?",
+      "modifier": null,
+      "rp_rank": null,
+      "rp_visibility": null,
+      "top_mentions": [
+        {"name": "Netcraft", "visibility": 87, "owned": false},
+        {"name": "PhishFort", "visibility": 73, "owned": false},
+        {"name": "Bolster", "visibility": 53, "owned": false}
+      ]
+    },
+    {
+      "text": "Which digital brand protection platforms are best for consumer electronics?",
+      "modifier": "icp-specific",
+      "rp_rank": null,
+      "rp_visibility": null,
+      "top_mentions": [],
+      "pending": true
+    },
+    {
+      "text": "Which digital brand protection platforms are best for the pharmaceutical industry?",
+      "modifier": "icp-specific",
+      "rp_rank": null,
+      "rp_visibility": null,
+      "top_mentions": [],
+      "pending": true
+    },
+    {
+      "text": "Which digital brand protection platforms are best for the automotive aftermarket?",
+      "modifier": "icp-specific",
+      "rp_rank": null,
+      "rp_visibility": null,
+      "top_mentions": [],
+      "pending": true
+    }
+  ],
+  "content_priorities": [
+    {"priority": 1, "content": "Brand impersonation guide", "stages": ["MOFU", "TOFU"], "our_visibility": 23, "owner": "BrandShield / ZeroFox", "status": "gap"},
+    {"priority": 2, "content": "Gray market / unauthorized seller page", "stages": ["MOFU"], "our_visibility": 46, "owner": "Amazon Seller Central", "status": "gap"},
+    {"priority": 3, "content": "Counterfeit / fake products guide", "stages": ["TOFU"], "our_visibility": 31, "owner": "BrandShield / MarqVision", "status": "gap"},
+    {"priority": 4, "content": "3 new neutral BOFU prompts", "stages": ["BOFU"], "our_visibility": 73, "owner": "BrandShield leads by 2pp", "status": "close"},
+    {"priority": 5, "content": "Revenue Recovery explainer update", "stages": ["BOFU"], "our_visibility": 73, "owner": "Narrative incomplete", "status": "close"}
+  ],
+  "typeform_pending": [
+    {"text": "My digital course is being shared on Telegram", "stage": "TOFU", "theme": "content-piracy", "count": "3/5", "status": "hold"},
+    {"text": "Corsearch removal rates declining — alternatives?", "stage": "BOFU competitive", "theme": null, "count": null, "status": "ready"},
+    {"text": "Trapped in cycle of reactive troubleshooting", "stage": "MOFU", "theme": "manual-enforcement", "count": "13/5", "status": "ready"}
+  ]
+}
