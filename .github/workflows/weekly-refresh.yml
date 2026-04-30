@@ -186,3 +186,51 @@ jobs:
               )
           print("Email sent successfully")
           EOF
+
+      - name: Send Slack notification
+        if: always()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          STATUS="${{ job.status }}"
+          if [ "$STATUS" = "success" ]; then
+            ICON=":white_check_mark:"
+            STATUS_TEXT="Refresh complete"
+          else
+            ICON=":x:"
+            STATUS_TEXT="Refresh failed — check Actions tab"
+          fi
+
+          CA=$(python3 -c "import json; d=json.load(open('data.json')); w=d.get('weekly',[]); print(str(w[-1].get('bofu_ca','—'))+'%' if w and w[-1].get('bofu_ca') is not None else '—')" 2>/dev/null || echo "—")
+          PREV_CA=$(python3 -c "import json; d=json.load(open('data.json')); w=d.get('weekly',[]); print(str(w[-2].get('bofu_ca','—'))+'%' if len(w)>=2 and w[-2].get('bofu_ca') is not None else '—')" 2>/dev/null || echo "—")
+          PERIOD=$(python3 -c "import json; d=json.load(open('data.json')); w=d.get('weekly',[]); print(w[-1].get('period','—') if w else '—')" 2>/dev/null || echo "—")
+
+          curl -s -X POST "$SLACK_WEBHOOK_URL" \
+            -H 'Content-type: application/json' \
+            --data "{
+              \"blocks\": [
+                {
+                  \"type\": \"header\",
+                  \"text\": { \"type\": \"plain_text\", \"text\": \"$ICON Omnia AI Visibility — $PERIOD\" }
+                },
+                {
+                  \"type\": \"section\",
+                  \"fields\": [
+                    { \"type\": \"mrkdwn\", \"text\": \"*BOFU category-aware*\n$CA (prev: $PREV_CA)\" },
+                    { \"type\": \"mrkdwn\", \"text\": \"*MOFU*\nBuilding baseline\" },
+                    { \"type\": \"mrkdwn\", \"text\": \"*TOFU*\nBuilding baseline\" },
+                    { \"type\": \"mrkdwn\", \"text\": \"*Status*\n$STATUS_TEXT\" }
+                  ]
+                },
+                {
+                  \"type\": \"actions\",
+                  \"elements\": [
+                    {
+                      \"type\": \"button\",
+                      \"text\": { \"type\": \"plain_text\", \"text\": \"View dashboard\" },
+                      \"url\": \"https://lwoue-collab.github.io/omnia-dashboard/\"
+                    }
+                  ]
+                }
+              ]
+            }"
