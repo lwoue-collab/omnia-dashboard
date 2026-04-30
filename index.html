@@ -532,6 +532,12 @@ tbody tr:hover td { background: var(--bg-secondary); }
       </div>
     </div>
 
+    <div class="section">
+      <div class="section-title">Top cited sources by funnel stage</div>
+      <div id="citation-boxes" style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:8px;"></div>
+      <p style="font-size:11px;color:var(--light);">Sources = pages LLMs cite most when answering prompts in each stage. BOFU category-aware is the headline metric — neutral queries only, no vendor named. MOFU and TOFU populate automatically as data builds.</p>
+    </div>
+
   </div>
 
   <!-- LAETITIA -->
@@ -657,6 +663,7 @@ function renderAll() {
 
   // Priorities
   renderPriorities();
+  renderCitationBoxes();
 }
 
 function renderKPI(id, val, prev, avg, showAvg) {
@@ -881,6 +888,46 @@ function renderPriorities() {
   }).join('');
 }
 
+function renderCitationBoxes() {
+  const el = document.getElementById('citation-boxes');
+  if (!el || !DATA.citation_sources) return;
+  const stageColors = {
+    ca: 'background:#FCEBEB;color:#791F1F;',
+    bofu: 'background:#E8EAF6;color:#1A237E;',
+    mofu: 'background:#D5F5E3;color:#085041;',
+    tofu: 'background:#FAE5D3;color:#7B3F00;'
+  };
+  const stageLabels = {ca:'headline metric', bofu:'BOFU', mofu:'MOFU', tofu:'TOFU'};
+  const keys = ['bofu_ca','bofu_overall','mofu','tofu'];
+  el.innerHTML = keys.map(k => {
+    const s = DATA.citation_sources[k];
+    if (!s) return '';
+    const isPrimary = k === 'bofu_ca';
+    const hasSources = s.sources && s.sources.length > 0;
+    const body = hasSources
+      ? `<div style="padding:8px 12px;">${s.sources.map(src => `
+          <div style="display:flex;align-items:center;gap:6px;padding:5px 0;border-bottom:0.5px solid var(--border);">
+            <span style="font-size:10px;font-weight:500;color:var(--light);min-width:14px;">${src.rank}</span>
+            <a href="${src.url}" target="_blank" rel="noopener" style="font-size:11px;color:var(--mid);text-decoration:none;flex:1;line-height:1.3;">${src.title} <span style="opacity:0.5;font-size:9px;">↗</span></a>
+            <span style="font-size:10px;color:var(--light);flex-shrink:0;font-family:'DM Mono',monospace;">${src.domain}</span>
+          </div>`).join('')}</div>`
+      : `<div style="padding:20px 12px;text-align:center;">
+          <div style="font-size:22px;font-weight:300;color:var(--light);margin-bottom:4px;">—</div>
+          <div style="font-size:11px;color:var(--light);">No data yet</div>
+          <div style="font-size:10px;color:var(--light);margin-top:3px;font-style:italic;">Prompts added 28 Apr — check back in ~2 weeks</div>
+        </div>`;
+    return `<div style="background:var(--bg-card);border-radius:var(--border-radius-lg);overflow:hidden;border:${isPrimary?'1px solid var(--red)':'0.5px solid var(--border)'};">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;padding:10px 12px 8px;border-bottom:0.5px solid var(--border);">
+        <div>
+          <div style="font-size:11px;font-weight:500;color:var(--dark);">${s.label}</div>
+          <div style="font-size:10px;color:var(--light);margin-top:2px;">${s.subtitle}</div>
+        </div>
+        <span style="font-size:10px;font-weight:500;padding:2px 7px;border-radius:8px;flex-shrink:0;${stageColors[s.stage]}">${stageLabels[s.stage]}</span>
+      </div>
+      ${body}
+    </div>`;
+  }).join('');
+}
 function toggleFunnelLegend() {
   const wrap = document.getElementById('funnel-legend-wrap');
   const arrow = document.getElementById('funnel-legend-arrow');
