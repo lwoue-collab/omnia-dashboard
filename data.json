@@ -424,6 +424,42 @@
       ]
     }
   ],
+  "citation_sources": {
+    "bofu_ca": {
+      "label": "BOFU category-aware",
+      "subtitle": "Neutral queries only · BrandShield leads 75%",
+      "stage": "ca",
+      "sources": [
+        {"rank": 1, "title": "10 best brand protection tools reviewed (2026)", "url": "https://www.marqvision.com/blog/brand-protection-tools", "domain": "marqvision.com"},
+        {"rank": 2, "title": "Best online brand protection tools 2026: ranked & compared", "url": "https://www.brandshield.com/blog/best-online-brand-protection-tools", "domain": "brandshield.com"},
+        {"rank": 3, "title": "6 best brand protection platforms for 2026", "url": "https://www.netcraft.com/blog/6-best-brand-protection-platforms-for-defending-your-company-s-online-reputation", "domain": "netcraft.com"},
+        {"rank": 4, "title": "The 6 best online brand protection software tools by category", "url": "https://www.brandverity.com/blog/best-online-brand-protection-software-tools", "domain": "brandverity.com"}
+      ]
+    },
+    "bofu_overall": {
+      "label": "BOFU overall",
+      "subtitle": "Includes competitive + branded-direct prompts",
+      "stage": "bofu",
+      "sources": [
+        {"rank": 1, "title": "Red Points reviews & ratings 2026", "url": "https://www.gartner.com/reviews/product/red-points", "domain": "gartner.com"},
+        {"rank": 2, "title": "BrandShield vs Red Points: best brand protection platform", "url": "https://www.brandshield.com/blog/brandshield-vs-red-points", "domain": "brandshield.com"},
+        {"rank": 3, "title": "Red Points reviews 2026: details, pricing & features", "url": "https://www.g2.com/products/red-points/reviews", "domain": "g2.com"},
+        {"rank": 4, "title": "Red Points reviews 2026 — Capterra", "url": "https://www.capterra.com/p/178310/Red-Points/reviews", "domain": "capterra.com"}
+      ]
+    },
+    "mofu": {
+      "label": "MOFU sources",
+      "subtitle": "Data building",
+      "stage": "mofu",
+      "sources": []
+    },
+    "tofu": {
+      "label": "TOFU sources",
+      "subtitle": "Data building",
+      "stage": "tofu",
+      "sources": []
+    }
+  },
   "typeform_pending": [
     {"text": "My digital course is being shared on Telegram", "stage": "TOFU", "theme": "content-piracy", "count": "3/5", "status": "hold"},
     {"text": "Corsearch removal rates declining — alternatives?", "stage": "BOFU competitive", "theme": null, "count": null, "status": "ready"},
