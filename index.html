@@ -718,6 +718,7 @@ function renderTrend() {
   }).join('') + '<th>Direction</th>';
   tb.innerHTML = [
     { label: '<span class="pill pill-bofu">BOFU cat-aware</span>', key: 'bofu_ca', dir: 'growing' },
+    { label: '<span class="pill pill-comp">BOFU overall</span>', key: 'bofu_overall', dir: 'pending' },
     { label: '<span class="pill pill-mofu">MOFU</span>', key: 'mofu', dir: 'pending' },
     { label: '<span class="pill pill-tofu">TOFU</span>', key: 'tofu', dir: 'pending' },
   ].map(row => {
