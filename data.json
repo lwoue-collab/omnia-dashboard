@@ -184,7 +184,7 @@
     {
       "period": "Week of 27 Apr 2026",
       "bofu_ca": 86,
-      "bofu_ca_avg4": 75,
+      "bofu_ca_avg4": 79,
       "mofu": 0,
       "tofu": 0,
       "competitors_bofu": [
@@ -360,7 +360,7 @@
     },
     {
       "name": "brand-impersonation",
-      "visibility": 16,
+      "visibility": 18,
       "status": "gap"
     }
   ],
