@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-04",
+  "lastUpdated": "2026-05-11",
   "weekly": [
     {
       "period": "17 Mar 2026",
@@ -238,6 +238,35 @@
           "owned": false
         }
       ]
+    },
+    {
+      "period": "Week of 11 May 2026",
+      "bofu_ca": 46,
+      "bofu_ca_avg4": 69,
+      "mofu": 0,
+      "tofu": 0,
+      "competitors_bofu": [
+        {
+          "name": "Red Points",
+          "visibility": 46,
+          "owned": true
+        },
+        {
+          "name": "BrandShield",
+          "visibility": 79,
+          "owned": false
+        },
+        {
+          "name": "Corsearch",
+          "visibility": 49,
+          "owned": false
+        },
+        {
+          "name": "MarqVision",
+          "visibility": 31,
+          "owned": false
+        }
+      ]
     }
   ],
   "monthly": [
@@ -362,29 +391,29 @@
     },
     {
       "period": "May 2026",
-      "bofu_ca": 86,
-      "bofu_ca_avg4": 77,
+      "bofu_ca": 65,
+      "bofu_ca_avg4": 75,
       "mofu": 0,
       "tofu": 0,
       "competitors_bofu": [
         {
           "name": "Red Points",
-          "visibility": 86,
+          "visibility": 65,
           "owned": true
         },
         {
           "name": "BrandShield",
-          "visibility": 75,
+          "visibility": 72,
           "owned": false
         },
         {
           "name": "Corsearch",
-          "visibility": 49,
+          "visibility": 48,
           "owned": false
         },
         {
           "name": "MarqVision",
-          "visibility": 43,
+          "visibility": 41,
           "owned": false
         }
       ]
@@ -393,27 +422,22 @@
   "themes": [
     {
       "name": "category-aware",
-      "visibility": 71,
-      "status": "leading"
+      "visibility": 46,
+      "status": "close"
     },
     {
       "name": "global-enforcement",
-      "visibility": 100,
-      "status": "leading"
+      "visibility": 57,
+      "status": "close"
     },
     {
       "name": "manual-enforcement",
-      "visibility": 100,
-      "status": "leading"
+      "visibility": 25,
+      "status": "gap"
     },
     {
       "name": "unauthorized-sellers",
-      "visibility": 86,
-      "status": "leading"
-    },
-    {
-      "name": "fake-products",
-      "visibility": 22,
+      "visibility": 18,
       "status": "gap"
     },
     {
