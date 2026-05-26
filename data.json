@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-25",
+  "lastUpdated": "2026-05-26",
   "weekly": [
     {
       "period": "17 Mar 2026",
@@ -299,29 +299,29 @@
     },
     {
       "period": "Week of 25 May 2026",
-      "bofu_ca": 76,
-      "bofu_ca_avg4": 65,
+      "bofu_ca": 74,
+      "bofu_ca_avg4": 66,
       "mofu": 0,
       "tofu": 0,
       "competitors_bofu": [
         {
           "name": "Red Points",
-          "visibility": 76,
+          "visibility": 74,
           "owned": true
         },
         {
           "name": "BrandShield",
-          "visibility": 74,
+          "visibility": 62,
           "owned": false
         },
         {
           "name": "Corsearch",
-          "visibility": 39,
+          "visibility": 40,
           "owned": false
         },
         {
           "name": "MarqVision",
-          "visibility": 41,
+          "visibility": 39,
           "owned": false
         }
       ]
@@ -450,7 +450,7 @@
     {
       "period": "May 2026",
       "bofu_ca": 85,
-      "bofu_ca_avg4": 78,
+      "bofu_ca_avg4": 82,
       "mofu": 0,
       "tofu": 0,
       "competitors_bofu": [
@@ -461,7 +461,7 @@
         },
         {
           "name": "BrandShield",
-          "visibility": 68,
+          "visibility": 67,
           "owned": false
         },
         {
@@ -480,32 +480,32 @@
   "themes": [
     {
       "name": "category-aware",
-      "visibility": 76,
+      "visibility": 74,
       "status": "leading"
     },
     {
       "name": "global-enforcement",
-      "visibility": 52,
+      "visibility": 45,
       "status": "close"
     },
     {
       "name": "manual-enforcement",
-      "visibility": 48,
+      "visibility": 46,
       "status": "close"
     },
     {
       "name": "unauthorized-sellers",
-      "visibility": 20,
+      "visibility": 23,
       "status": "gap"
     },
     {
       "name": "fake-products",
-      "visibility": 30,
-      "status": "close"
+      "visibility": 29,
+      "status": "gap"
     },
     {
       "name": "brand-impersonation",
-      "visibility": 10,
+      "visibility": 16,
       "status": "gap"
     }
   ],
