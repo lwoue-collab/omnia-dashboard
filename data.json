@@ -329,7 +329,7 @@
     {
       "period": "Week of 1 Jun 2026",
       "bofu_ca": 77,
-      "bofu_ca_avg4": 66,
+      "bofu_ca_avg4": 74,
       "mofu": 0,
       "tofu": 0,
       "competitors_bofu": [
@@ -508,7 +508,7 @@
     {
       "period": "Jun 2026",
       "bofu_ca": 77,
-      "bofu_ca_avg4": 79,
+      "bofu_ca_avg4": 80,
       "mofu": 0,
       "tofu": 0,
       "competitors_bofu": [
@@ -560,6 +560,11 @@
       "name": "fake-products",
       "visibility": 36,
       "status": "close"
+    },
+    {
+      "name": "brand-impersonation",
+      "visibility": 17,
+      "status": "gap"
     }
   ],
   "category_aware_prompts": [
