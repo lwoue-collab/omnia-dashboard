@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-01",
+  "lastUpdated": "2026-06-08",
   "weekly": [
     {
       "period": "17 Mar 2026",
@@ -354,6 +354,35 @@
           "owned": false
         }
       ]
+    },
+    {
+      "period": "Week of 8 Jun 2026",
+      "bofu_ca": 93,
+      "bofu_ca_avg4": 78,
+      "mofu": 0,
+      "tofu": 0,
+      "competitors_bofu": [
+        {
+          "name": "Red Points",
+          "visibility": 93,
+          "owned": true
+        },
+        {
+          "name": "BrandShield",
+          "visibility": 55,
+          "owned": false
+        },
+        {
+          "name": "Corsearch",
+          "visibility": 48,
+          "owned": false
+        },
+        {
+          "name": "MarqVision",
+          "visibility": 39,
+          "owned": false
+        }
+      ]
     }
   ],
   "monthly": [
@@ -507,29 +536,29 @@
     },
     {
       "period": "Jun 2026",
-      "bofu_ca": 77,
-      "bofu_ca_avg4": 80,
+      "bofu_ca": 89,
+      "bofu_ca_avg4": 84,
       "mofu": 0,
       "tofu": 0,
       "competitors_bofu": [
         {
           "name": "Red Points",
-          "visibility": 77,
+          "visibility": 89,
           "owned": true
         },
         {
           "name": "BrandShield",
-          "visibility": 66,
+          "visibility": 61,
           "owned": false
         },
         {
           "name": "Corsearch",
-          "visibility": 50,
+          "visibility": 60,
           "owned": false
         },
         {
           "name": "MarqVision",
-          "visibility": 41,
+          "visibility": 42,
           "owned": false
         }
       ]
@@ -538,33 +567,28 @@
   "themes": [
     {
       "name": "category-aware",
-      "visibility": 77,
+      "visibility": 93,
       "status": "leading"
     },
     {
       "name": "global-enforcement",
-      "visibility": 55,
+      "visibility": 48,
       "status": "close"
     },
     {
       "name": "manual-enforcement",
-      "visibility": 72,
+      "visibility": 65,
       "status": "leading"
     },
     {
       "name": "unauthorized-sellers",
-      "visibility": 26,
-      "status": "gap"
-    },
-    {
-      "name": "fake-products",
-      "visibility": 36,
+      "visibility": 31,
       "status": "close"
     },
     {
-      "name": "brand-impersonation",
-      "visibility": 17,
-      "status": "gap"
+      "name": "fake-products",
+      "visibility": 30,
+      "status": "close"
     }
   ],
   "category_aware_prompts": [
